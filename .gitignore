@@ -1,0 +1,10 @@
+# Emacs temp/autosave
+*~
+*.DS*
+
+# Eggs
+*egg-info*
+
+# Binaries
+*/bin/*
+
