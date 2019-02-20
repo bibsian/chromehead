@@ -13,7 +13,7 @@ pip install git+ssh://git@github.com/bibsian/chromehead#egg=chromehead
 
 Serverless Config
 ==================
-When you deploy your crawler as a lambda you have to install from
+When you deploy your headless crawler as a lambda you have to install from
 this repo by adding it to ``requirements.txt``:
 
 ``git://git@github.com/bibsian/chromehead#egg=chromehead``
