@@ -8,7 +8,7 @@ Installing Locally
 You install the repo and binaries from git with the command below:   
 
 ``` python
-pip install git+ssh://git@github.com/bibsian/chromehead#egg=chromehead
+pip install git://git@github.com/bibsian/chromehead#egg=chromehead
 ```
 
 Serverless Config
