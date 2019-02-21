@@ -8,7 +8,7 @@ Installing Locally
 You install the repo and binaries from git with the command below:   
 
 ``` python
-pip install git://git@github.com/bibsian/chromehead#egg=chromehead
+pip install git+https://git@github.com/bibsian/chromehead#egg=chromehead
 ```
 
 Serverless Config
@@ -16,7 +16,7 @@ Serverless Config
 When you deploy your headless crawler as a lambda you have to install from
 this repo by adding it to ``requirements.txt``:
 
-``git://git@github.com/bibsian/chromehead#egg=chromehead``
+``git+https://git@github.com/bibsian/chromehead#egg=chromehead``
 
 
 You'll also have to add the following to your ``serverless.yml``.
