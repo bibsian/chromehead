@@ -1,6 +1,12 @@
 About 
 ======
-Trying to make the setup for headless chrome on AWS lambda a little easier  
+Trying to make the setup for headless chrome on AWS lambda a little easier.
+
+If you're going to test it locally you should have Chrome installed.
+
+Note, I'm still debugging the deployment so if you see this it might now
+work right now (I have a version of this but not installed from git
+so that's the small hurdle).
 
 Installing Locally
 ===================
@@ -39,3 +45,12 @@ package:
     - bin/**
 
 ```
+
+Tests
+=====
+
+I just have a basic test that isn't headless (chromium doesn't
+like going headless on the mac).
+
+You can run it from the root directory:
+```python -m pytest tests/. --fulltrace -s -v```

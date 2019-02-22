@@ -27,8 +27,8 @@ setup(
         "Programming Language :: Python :: 3.6",
     ],
 
-    packages=find_packages(exclude=["tests"]),
-    install_requires=["selenium==2.53.6"],
+    packages=find_packages(exclude=["tests","deploy"]),
+    install_requires=["selenium==2.53.6", "pytest==4.3.0"],
     cmdclass={"install": BinaryInstall} 
 
 )
