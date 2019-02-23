@@ -7,9 +7,6 @@ import logging
 import os
 
 from selenium import webdriver
-print("INSTALL", os.getcwd())
-
-logger = logging.getLogger(__name__)
 
 
 class Head:
