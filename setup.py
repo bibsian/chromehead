@@ -5,12 +5,12 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 
 
-class BinaryInstall(install):
-
-    def run(self):
-        """Install binary dependencies from Makefile"""
-        subprocess.Popen(["make"], stdout=subprocess.PIPE)
-        install.run(self)
+#class BinaryInstall(install):
+#
+#    def run(self):
+#        """Install binary dependencies from Makefile"""
+#        subprocess.Popen(["make"], stdout=subprocess.PIPE)
+#        install.run(self)
 
 
 setup(
@@ -28,8 +28,8 @@ setup(
     ],
 
     packages=find_packages(exclude=["tests","deploy"]),
-    install_requires=["selenium==2.53.6", "pytest==4.3.0"],
-    cmdclass={"install": BinaryInstall} 
+    install_requires=["selenium==2.53.6", "pytest==4.3.0"]
+    #cmdclass={"install": BinaryInstall} 
 
 )
 
