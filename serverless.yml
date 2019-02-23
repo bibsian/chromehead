@@ -1,0 +1,42 @@
+# serverless.yml
+service: headless-chrome
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
+
+# pick our language and provider, this is automatically filled in by the template
+provider:
+  name: aws
+  runtime: python3.6
+  region: us-west-2
+  stage: "${opt:stage, 'dev'}"
+  environment:
+    PYTHONPATH: '/var/runtime:/var/task'
+    PATH: '/var/task/chromehead/bin'
+
+
+package:
+  include:
+    - chromehead/**
+  exclude:
+    - tests/**
+    - serverless.yml
+    - node_modules/**
+    - __pycache__/**
+    - __pycache__
+
+functions:
+  process:
+    handler: handler.handle
+    timeout: 30  
+    events:
+      - http:
+          path: /crawl
+          method: post
+    environment:
+      STAGE: "${self:provider.stage}"
