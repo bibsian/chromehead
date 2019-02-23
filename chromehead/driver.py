@@ -11,8 +11,7 @@ from selenium import webdriver
 
 class Head:
     """
-    Class to create a headless chrome driver and collect data
-    from www.scopus.com
+    Class to create a headless chrome driver 
     """
     DOWNLOAD_DIR = os.getcwd()    
         
